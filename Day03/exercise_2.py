@@ -31,9 +31,6 @@ if __name__ == '__main__':
     # input path
     INPUT_FILEPATH = "input.txt"
 
-    # exercise constraints
-    current_frequency = 0
-
     with open(INPUT_FILEPATH, encoding='utf-8') as input_file:
         lines = input_file.read().splitlines()
         fabric = {}

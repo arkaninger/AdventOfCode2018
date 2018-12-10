@@ -27,9 +27,6 @@ if __name__ == '__main__':
     # input path
     INPUT_FILEPATH = "input.txt"
 
-    # exercise constraints
-    current_frequency = 0
-
     # result
     claimed_more_than_once = 0
 
