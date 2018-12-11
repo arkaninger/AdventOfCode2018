@@ -67,18 +67,6 @@ if __name__ == '__main__':
             elif "falls" or "wakes" in line:
                 line = line.replace("]", "] Guard #{0}".format(guard_id))
                 actions_block.append(line)
-    desired_guard = max(guards_sleeping_dict.keys(), key=(lambda k: guards_sleeping_dict[k]))
-    print("The guard who sleeps the most is {0}".format(desired_guard))
-    minutes_desired_guard = {}
-    for minute in range(0, 60):
-        pair_guard_minute = (desired_guard, minute)
-        times_sleeping_that_minute = guards_minutes_sleeping_dict.get(pair_guard_minute)
-        if times_sleeping_that_minute is None:
-            times_sleeping_that_minute = 0
-        minutes_desired_guard[minute] = times_sleeping_that_minute
-    desired_guard_minute = max(minutes_desired_guard.keys(), key=(lambda k: minutes_desired_guard[k]))
-    print("And the minute he sleep the most is {0}".format(desired_guard_minute))
-    print("Then, the result is {0}*{1}={2}".format(desired_guard, desired_guard_minute, desired_guard*desired_guard_minute))
 
     desired_guard_frequent_minute = max(guards_minutes_sleeping_dict.keys(), key=(lambda k: guards_minutes_sleeping_dict[k]))
     print("The guard who is most frequently asleep on the same minute is guard {0} at minute {1}".format(desired_guard_frequent_minute[0], desired_guard_frequent_minute[1]))
