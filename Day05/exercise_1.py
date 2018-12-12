@@ -21,8 +21,6 @@ if __name__ == '__main__':
         polymer = input_file.read()
         while True:
             result = check_and_remove_reactive(polymer.strip())
-            # print(result)
-            # print(result.__len__())
             if result.__len__() < polymer.__len__():
                 polymer = result
             else:
